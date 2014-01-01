@@ -1,0 +1,26 @@
+﻿<Controls:MetroWindow x:Class="FeedPlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="FeedPlayer" Height="465.65" Width="470" Closing="Window_Closing">
+
+    <Grid Background="WhiteSmoke" Margin="0,0,2,1">
+        <MediaElement Height="5" HorizontalAlignment="Left" Margin="12,386,0,0" x:Name="mediaElement1" VerticalAlignment="Top" Width="19" UnloadedBehavior="Manual" LoadedBehavior="Manual" Volume="1.0" />
+        <ListBox Background="WhiteSmoke" Height="343" Margin="12,0,12,53" x:Name="listBox1" VerticalAlignment="Bottom" MouseDoubleClick="listBox1_MouseDoubleClick" FontSize="16" >
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Download" Click="Fuck_Click"/>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
+
+        <Button Content="Back" Height="28" HorizontalAlignment="Left" Margin="291,396,0,0" x:Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+        <Button Content="Pause" Height="28" HorizontalAlignment="Left" Margin="371,396,0,0" x:Name="button4" VerticalAlignment="Top" Width="75" Click="button4_Click" />
+        <Label Content="Volume: 50" HorizontalAlignment="Left" Margin="111,381,0,15" x:Name ="volumelabel"  />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="10,406,0,0" x:Name="slider1" VerticalAlignment="Top" Width="274" ValueChanged="slider1_ValueChanged" Maximum="1" Value="1.0" />
+        <Menu DockPanel.Dock="Top" Width="auto" Margin="0,0,0,396">
+            <MenuItem Header="Update" Click="Update_Click"/>
+            <MenuItem Header="Login"/>
+        </Menu>
+    </Grid>
+</Controls:MetroWindow>
